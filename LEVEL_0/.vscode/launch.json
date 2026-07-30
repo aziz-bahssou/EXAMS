@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_0/0_aff_first_param",
-      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_0/0_aff_first_param/build/Debug/outDebug",
+      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_0/6_ft_print_numbers",
+      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_0/6_ft_print_numbers/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

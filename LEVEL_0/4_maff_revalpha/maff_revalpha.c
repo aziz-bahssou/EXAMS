@@ -7,17 +7,18 @@ void    ft_putchar(char c)
 
 int main(void)
 {
-    int x;
+    char c;
+    int i;
 
-    x = 122;
-
-    while (x >= 97)
-    {
-       if (x % 2 == 0)
-        ft_putchar(x);
+    c = 'z';
+    i = 0;
+    while (i < 26){
+        if(i % 2 != 0)
+            ft_putchar(c - 32);
         else
-        ft_putchar(x - 32);
-        x--;
+            ft_putchar(c);
+        i++;
+        c--;
     }
     return 0;
 }
