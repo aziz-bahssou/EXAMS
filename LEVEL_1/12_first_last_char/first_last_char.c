@@ -23,5 +23,4 @@ int	main(int ac, char **av)
 	_putchar(av[1][0]);
 	_putchar(av[1][0]);
 	return(0);
-
 }
