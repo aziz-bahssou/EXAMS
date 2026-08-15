@@ -2,28 +2,30 @@
 
 void	print_nth_char(char *str, int n)
 {
-	if(str[0] == '\0' || n < 0)
+	if(str[0] == '\0' || n <= 0)
 	{
 		write(1, "\n",1);
-		return(0);
+		return;
 	}
 
 	int i;
-	i = 0;
+	int len;
+	len = 0;
 
-	while(str[i])
-		i++;
+	while(str[len])
+		len++;
 
-	if( n > i)
+	if( n > len)
 	{
 		write(1, "\n",1);
-		return(0);
+		return;
 	}
-	i = 0;
-	while(str[i])
+	i = n -1;
+	while(i < len)
 	{
-		write(1, str[i],1);
+		write(1, &str[i],1);
 		i += n;
 	}
+	write(1, "\n",1);
 
 }
