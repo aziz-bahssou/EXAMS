@@ -23,6 +23,6 @@ int	main(int ac, char **av)
 		write(1, "\n",1);
 		return(0);
 	}
-	printf("%d", _count_len(av[1]));
+	printf("%d", _count_len(av[1])); 
 	return(0);
 }

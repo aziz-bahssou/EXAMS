@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_1/0_ft_swap",
-      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_1/0_ft_swap/build/Debug/outDebug",
+      "cwd": "/home/rokaziz/Desktop/days-test/test",
+      "program": "/home/rokaziz/Desktop/days-test/test/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
