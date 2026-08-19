@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 }
 #include <stdio.h>
 
-int main()
+int main(int ac, char **av)
 {
-	printf("%d", ft_atoi("132GG"));
+	printf("%d", ft_atoi(av[1]));
 }	
