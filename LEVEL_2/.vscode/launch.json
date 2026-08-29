@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_2/0_ft_atoi",
-      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_2/0_ft_atoi/build/Debug/outDebug",
+      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_2/26_ft_strncpy",
+      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_2/26_ft_strncpy/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
