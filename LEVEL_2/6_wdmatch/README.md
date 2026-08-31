@@ -23,4 +23,4 @@ quarante deux$
 $>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
 $
 $>./wdmatch | cat -e
-$
+$ 

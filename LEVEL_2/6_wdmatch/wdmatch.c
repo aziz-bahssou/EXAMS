@@ -10,18 +10,18 @@ void _print_str(char *str)
 int is_matched(char *str1, char *str2)
 {
 	int i;
+	
 	i = 0;
 	while(*str1)
 	{
-		while (str2[i] && *str1 != str2[i])
-			i++;
-		if(!str2[i])
-			return(0);
-			
+		if(str2[i] && *str1 == str2[i])
+			str1++;
+		
 		i++;
-		str1++;
 	}
-	return(1);
+	if(*str1 == '\0')
+		return(1);
+	return(0);
 }
 
 int	main(int ac, char **av)
