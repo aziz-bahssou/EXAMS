@@ -18,9 +18,3 @@ int	ft_is_sorted(int *tab, int size)
 	}
 	return(asc || desc);
 }
-#include <stdio.h>
-int main()
-{
-	int arr[] = {1,3,2,3,5,6};
-	printf("%d\n",ft_is_sorted(arr,6));
-}
