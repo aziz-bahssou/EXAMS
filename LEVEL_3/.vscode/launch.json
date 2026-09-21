@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_3/0_hidenp",
-      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_3/0_hidenp/build/Debug/outDebug",
+      "cwd": "/home/rokaziz/Desktop/EXAMS/LEVEL_3/5_str_capitalizer",
+      "program": "/home/rokaziz/Desktop/EXAMS/LEVEL_3/5_str_capitalizer/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
