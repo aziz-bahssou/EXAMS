@@ -18,6 +18,7 @@ Example:
 
 $> ./epur_str "vous voyez c'est facile d'afficher la meme chose" | cat -e
 vous voyez c'est facile d'afficher la meme chose$
+
 $> ./epur_str " seulement          la c'est      plus dur " | cat -e
 seulement la c'est plus dur$
 $> ./epur_str "comme c'est cocasse" "vous avez entendu, Mathilde ?" | cat -e
