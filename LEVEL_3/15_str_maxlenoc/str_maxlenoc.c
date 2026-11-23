@@ -1,7 +1,9 @@
+#include <stdio.h> 
 #include <unistd.h>
 #include <stdlib.h>
 
-int leenth(char *str)
+
+int get_lenth(char *str)
 {
 	int i = 0;
 	while(str[i])
@@ -9,87 +11,94 @@ int leenth(char *str)
 	return(i);
 }
 
-
-void print_arr(char *str)
+void print_str(char *str)
 {
 	int i = 0;
 	while(str[i])
 		write(1, &str[i++], 1);
 }
 
-int sub_exist(char *condidat, char *sub)
-{
-	int i, j;
 
-	i = 0;
-	while(condidat[i])
+int is_sub_apperse(char *av_str, char *sub)
+{
+	int i = 0;
+	int j;
+
+	while(av_str[i])
 	{
-		if(condidat[i] == *sub)
+		if(av_str[i] == *sub)
 		{
 			j = 0;
-			while(sub[j] == condidat[i + j])
+			while(av_str[i + j] == sub[j])
 				j++;
-
 			if(sub[j] == '\0')
 				return(1);
 		}
-		j++;
+		i++;
 	}
+
 	return(0);
-	
 }
 
-void main_loop(char **av, int ac)
+int main(int ac, char **av)
 {
-	char *sub;
-	int i;
-	int j;
-	int k;
-	int str_lenth = leenth(av[1]);
-	int lenth = str_lenth;
-
-	sub = malloc(str_lenth + 1);
-	if (!sub)
-		return;
-	sub[str_lenth] = '\0';
-
-	while (lenth > 0)
+	if(ac == 1)
 	{
-		i = 0;
-		while (i + lenth <= str_lenth)
+		write(1, "\n", 1);
+		return(0);
+	}
+
+	char *str_sub;
+	int lenth;
+	int str_lengh;
+	int i;
+	int k;
+	int j;
+	
+	lenth = get_lenth(av[1]);
+
+	str_sub = malloc(lenth + 1);
+	if(!str_sub)
+		return(0);
+	str_sub[lenth] = '\0';
+
+	i = 0;
+	str_lengh = lenth;
+
+	while(lenth)
+	{
+		j = 0;
+		while(j + lenth <= str_lengh)
 		{
 			k = 0;
-			while (k < lenth)
+			while(k < lenth)
 			{
-				sub[k] = av[1][i + k];
+				str_sub[k] = av[1][j + k];
 				k++;
 			}
-			sub[k] = '\0';
+			str_sub[k] = '\0';
 
-			j = 2;
-
-			while (j < ac && sub_exist(av[j], sub))
-				j++;
-
-			if (j == ac)
+			i = 2;
+			while(i < ac && is_sub_apperse(av[i], str_sub))
 			{
-				print_arr(sub);
-				write(1, "\n", 1);
-				free(sub);
-				return;
+				i++;
 			}
-			i++;
+			
+			if(i == ac)
+			{
+				print_str(str_sub);
+				free(str_sub);
+				write(1, "\n", 1);
+				return(0);
+			}
+
+			j++;
 		}
 		lenth--;
 	}
+	
+	free(str_sub);
 	write(1, "\n", 1);
-	free(sub);
-}
-
-int	main(int ac, char **av)
-{
-
-	main_loop(av, ac);
-
+	return(0);
 
 }
